@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>5AnotMinus</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/Assets/Admin/css/header-footer.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/07d5fb8cf6.js"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+    <!-- header section start -->
+    <header>
+        <div class="logo">
+            <a href="Home" class="logoimg">
+                <img src="~/Assets/Admin/img/logoheader.png" alt="logo5anotminus" />
+            </a>
+            <a href="Home" class="logo5anotminus">5AnotMinus</a>
+        </div>
+        <nav class="navbar">
+            <a href="/Home">Home</a>
+            <a href="/Contact">Contact</a>
+            <a id="about" href="/About">About</a>
+            <a id="sign-in" href="/LoginKH">Sign In</a>
+        </nav>
+        <div class="icons">
+            <div class="search-box">
+                <div class="fa-solid fa-magnifying-glass"></div>
+                <div class="search-input">
+                    <input type="text" class="input" placeholder="Search..." />
+                </div>
+            </div>
+
+            <!-- <a href="#" class="fa-solid fa-magnifying-glass"></a> -->
+            <a id="heart-cart" href="#" class="fa-regular fa-heart"></a>
+            <a id="heart-cart" href="#" class="fa-solid fa-cart-shopping"></a>
+            <div class="user-menu">
+                <button type="button" class="user-icon"><i class="fa fa-user"></i></button>
+                <div class="menu-items">
+                    <a href="#"><i class="fas fa-user"></i>My Account</a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i>My Order</a>
+                    <a href="#"><i class="fas fa-ban"></i>My Cancellations</a>
+                    <a href="#"><i class="fas fa-star"></i>My Reviews</a>
+                    <a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <div class="support-widget">
+                        <span>385, Tang Nhon Phu B,</span>
+                        <br>
+                        <span>Thu Duc City,</span>
+                        <br>
+                        <span>Ho Chi Minh City.</span>
+                        <br>
+                        <br>
+                        <span>5anotminus@gmail.com</span>
+                        <br>
+                        <br>
+                        <span>0909000xxx</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Login / Register</a></li>
+                        <li><a href="#">Cart</a></li>
+                        <li><a href="#">Wishlist</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Link</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Term Of Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow 5AnotMinus</h4>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <div>
+                        <img class="logofooter" src="~/Assets/Admin/img/logo.png" alt="logo5anotminus">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>Copyright 5AnotMinus 2023. All right reserved</p>
+    </footer>
+    <script src="~/Assets/Admin/js/header-footer.js"></script>
+</body>
+</html>

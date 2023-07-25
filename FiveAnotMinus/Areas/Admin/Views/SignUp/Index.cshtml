@@ -1,0 +1,89 @@
+﻿
+@{
+    Layout = null;
+}
+@model FiveAnotMinus.Areas.Admin.Models.SignUpModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animated Sign-Up Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:400&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/Admin/css/login.css" />
+    <link rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <img class="wave" src="~/Assets/Admin/img/wave.png" />
+        <div class="img">
+            <img src="~/Assets/Admin/img/bg.svg" />
+        </div>
+        <div class="login-content">
+            @using (Html.BeginForm("Create", "SignUp", FormMethod.Post))
+            {
+
+                <h3>Create an account</h3>
+                <p>Enter your details below</p>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Username</h5>
+                        @Html.TextBoxFor(model => model.UserName, new { @class = "input" })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Email</h5>
+                        @Html.TextBoxFor(model => model.Email, new { @class = "input" })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Phone number</h5>
+                        @Html.TextBoxFor(model => model.SDT, new { @class = "input" })
+                        @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Password</h5>
+                        @Html.PasswordFor(model => model.Password, new { @class = "input" })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="toast-btn">Create Account</button>
+                </div>
+                <br />
+                <br />
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "abc" })
+            }
+        </div>
+    </div>
+    <script type="text/javascript" src="~/Assets/Admin/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</body>
+</html>
